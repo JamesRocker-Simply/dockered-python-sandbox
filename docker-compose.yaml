@@ -1,0 +1,13 @@
+version: '3'
+services:
+  dockered-python:
+    build:
+      context: .
+      args:
+        ACCOUNT_ID: '129462528407' # dev-base
+        REGION: eu-west-1
+        ENVIRONMENT: dev
+    ports:
+      - 8888:8888
+    volumes:
+      - ./source:/sbapp/source
